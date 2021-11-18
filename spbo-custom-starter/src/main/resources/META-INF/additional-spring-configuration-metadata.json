@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "young.money.port",
+      "type": "java.lang.Integer",
+      "description": "young_money的端口，默认值：8848"
+    },
+    {
+      "name": "young.money.name",
+      "type": "java.lang.String",
+      "description": "young_money的name"
+    }
+  ]
+}

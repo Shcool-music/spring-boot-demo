@@ -1,0 +1,19 @@
+young:
+  port: 8081
+  name: problem
+  moneyLists:
+    - 1
+    - 2
+    - 3
+  moneyMaps: { key1: 'value1', key2: 'value2' }
+  moneyListMaps:
+    key1:
+      - 1
+      - 2
+      - 3
+    key2:
+      - 4
+      - 5
+      - 6
+  money:
+    name: problem

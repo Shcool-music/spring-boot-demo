@@ -1,0 +1,32 @@
+logging:
+  file:
+    path: /user/home/.problem #文件日志路径
+    name: ${spring.application.name}.log #日志文件名
+  #对日志进行分组，如：tomcat这一组的日志全部设置为DEBUG
+  group:
+    tomcat: org.apache.catalina, org.apache.coyote, org.apache.tomcat
+  level:
+    tomcat: DEBUG
+    problem:
+      spbologlogback:
+        TestLogController: DEBUG
+spring:
+  application:
+    name: spbo-logback
+
+#通过actuator可以进行动态修改日志级别
+#eg: post http://127.0.0.1:8080/actuator/loggers/problem.spbologlogback.TestLogController
+#    然后设置post的请求参数
+#    {
+#	    "configuredLevel" : "DEBUG"
+#    }
+#management:
+#  endpoints:
+#    # Actuator HTTP 配置项，对应 WebEndpointProperties 配置类
+#    web:
+#      exposure:
+#        include: '*' # 需要开放的端点。默认值只打开 health 和 info 两个端点。通过设置 * ，可以开放所有端点。
+
+
+#开启核心日志的DEBUG模式
+#debug: true
